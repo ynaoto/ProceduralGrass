@@ -13,10 +13,12 @@
 	SubShader
 	{
 		Tags { "RenderType"="Opaque" }
+		Tags{ "RenderPipeline" = "UniversalPipeline" }
 		LOD 100
 		Cull Off
 		CGINCLUDE
 			#include "UnityCG.cginc"
+			#define UNITY_PASS_FORWARDBASE
 		
 			#ifdef UNITY_PASS_FORWARDBASE
 			#pragma multi_compile_fog
@@ -137,7 +139,8 @@
 		
 		Pass
 		{
-			Tags {"LightMode" = "ForwardBase"}
+			//Tags {"LightMode" = "ForwardBase"}
+			Tags {"LightMode" = "UniversalForward"}
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
