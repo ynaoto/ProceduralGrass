@@ -13,7 +13,7 @@
 	SubShader
 	{
 		Tags { "RenderType"="Opaque" }
-		Tags{ "RenderPipeline" = "UniversalPipeline" }
+		//Tags{ "RenderPipeline" = "UniversalPipeline" }
 		LOD 100
 		Cull Off
 		CGINCLUDE
@@ -140,7 +140,7 @@
 		Pass
 		{
 			//Tags {"LightMode" = "ForwardBase"}
-			Tags {"LightMode" = "UniversalForward"}
+			//Tags {"LightMode" = "UniversalForward"}
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
